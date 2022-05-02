@@ -12,7 +12,10 @@
         naersk-lib = pkgs.callPackage naersk { };
       in
       {
-        packages.default = naersk-lib.buildPackage ./.;
+        packages.default = naersk-lib.buildPackage {
+          src = ./.;
+          buildInputs = [ pkgs.openssl ] ;
+        };
 
         defaultApp = utils.lib.mkApp {
           drv = self.packages."${system}".default;

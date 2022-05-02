@@ -334,7 +334,7 @@ fn toot_shorten(text: &str, tweet_id: u64) -> String {
         // Remove the last word.
         shortened = re.replace_all(&shortened, "").trim().to_string();
         // Add a link to the full length tweet.
-        with_link = format!("{shortened}… https://twitter.com/twitter/status/{tweet_id}");
+        with_link = format!("{shortened}… https://twitter.com/twitter/status/{tweet_id}", shortened, tweet_id);
         char_count = with_link.graphemes(true).count();
     }
     with_link

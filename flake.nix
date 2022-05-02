@@ -15,7 +15,7 @@
         packages.default = naersk-lib.buildPackage ./.;
 
         defaultApp = utils.lib.mkApp {
-          drv = self.packages.default."${system}";
+          drv = self.packages."${system}".default;
         };
 
         devShell = with pkgs; mkShell {

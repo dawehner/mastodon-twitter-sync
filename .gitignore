@@ -3,3 +3,5 @@
 **/*.rs.bk
 /*cache.json
 mastodon-twitter-sync.toml
+.direnv
+result

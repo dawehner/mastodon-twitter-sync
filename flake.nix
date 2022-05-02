@@ -14,7 +14,7 @@
       {
         packages.default = naersk-lib.buildPackage {
           src = ./.;
-          buildInputs = [ pkgs.openssl ] ;
+          buildInputs = [ pkgs.openssl pkgs.pkgconfig ] ;
         };
 
         defaultApp = utils.lib.mkApp {

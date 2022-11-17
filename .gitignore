@@ -5,3 +5,4 @@
 mastodon-twitter-sync.toml
 .direnv
 result
+secrets/
